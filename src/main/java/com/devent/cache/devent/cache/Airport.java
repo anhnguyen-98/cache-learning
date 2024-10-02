@@ -5,9 +5,7 @@ import lombok.Data;
 
 @AllArgsConstructor
 @Data
-public class Employee {
+public class Airport {
     private String name;
-    private int age;
-    private String dept;
-    private String empId;
+    private String code;
 }

@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class CacheConfiguration {
 
     @Bean
-    public CacheStore<Employee> employeeCache() {
+    public CacheStore<Airport> employeeCache() {
         return new CacheStore<>(60, TimeUnit.SECONDS);
     }
 }
