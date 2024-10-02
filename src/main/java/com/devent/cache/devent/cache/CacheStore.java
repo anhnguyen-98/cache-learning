@@ -10,7 +10,7 @@ public class CacheStore<T> {
 
     public CacheStore(int expiryDuration, TimeUnit timeUnit) {
         cache = CacheBuilder.newBuilder()
-                .expireAfterAccess(expiryDuration, timeUnit)
+                .expireAfterWrite(expiryDuration, timeUnit)
                 .build();
     }
 

@@ -1,16 +1,14 @@
 package com.devent.cache.devent.cache;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class EmployeeService {
 
-    @Autowired
-    public EmployeeRepository employeeRepository;
-
-    @Autowired
-    public CacheStore<Employee> employeeCache;
+    public final EmployeeRepository employeeRepository;
+    public final CacheStore<Employee> employeeCache;
 
     public Employee getEmployeeById(String empId) {
         //Search Employee record in Cache

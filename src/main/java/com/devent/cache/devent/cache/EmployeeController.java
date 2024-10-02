@@ -1,5 +1,6 @@
 package com.devent.cache.devent.cache;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(("/api/v1/employees"))
+@RequiredArgsConstructor
 public class EmployeeController {
 
-    @Autowired
-    public EmployeeService employeeService;
+    public final EmployeeService employeeService;
 
     @GetMapping("/{id}")
     public ResponseEntity<Employee> getEmployee(@PathVariable(name = "id") String id) {
